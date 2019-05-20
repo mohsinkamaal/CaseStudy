@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrackerModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -67,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackerModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="WorkoutRepository.cs" />
     <Compile Include="workout_active.cs">
       <DependentUpon>TrackerModel.tt</DependentUpon>
     </Compile>

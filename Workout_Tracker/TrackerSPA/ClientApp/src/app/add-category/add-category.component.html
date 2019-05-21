@@ -1,0 +1,13 @@
+<form novalidate [formGroup]="frmCate" class="form-inline" (ngSubmit)="saveForm(frmCate)">
+  <div class="form-group col-md-12">
+    <input type="text" name="name" id="name" formControlName="name" class="form-control" [ngClass]="{'is-valid':f.name.valid,'is-invalid':f.name.invalid && f.name.dirty}">
+    <div *ngIf="f.name.invaild && f.name.dirty && f.name.errors?.required" class="invalid-feedback">
+      Category name is required
+    </div>
+    <br />
+    <button type="submit" [disabled]="!frmCate.valid" class="btn btn-success btn-lg">+</button>
+    <div *ngIf="f.name.invaild && f.name.dirty && f.name.errors?.minLength" class="invalid-feedback">
+      Minimum 3 characters required 
+    </div>
+  </div>
+</form>

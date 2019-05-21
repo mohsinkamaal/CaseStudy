@@ -8,17 +8,16 @@ namespace BusinessLogic
 {
     public class WorkoutRepository
     {
-        public List<workout_category> ListAllCategory()
+        public List<workout_category> ListCategory()
         {
             try
             {
                 WorkoutAppEntities db = new WorkoutAppEntities();
                 return db.workout_category.ToList();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                throw ex;
             }
         }
 

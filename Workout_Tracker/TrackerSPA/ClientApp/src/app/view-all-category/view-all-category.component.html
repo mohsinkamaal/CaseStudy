@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-add-category (CategoryAdded)="SaveCategory($event)"></app-add-category>
+    </div>
+    <div class="col-md-12">
+      <input type="text" class="form-control" name="search" [(ngModel)]="cate" />
+    </div>
+    <div class="col-md-12">
+      <table class="table">
+        <tr>
+          <th>Category Name</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let cat of Categories | SearchBar: cate">
+          <app-edit-category [NameAdd]="cat" (CategoryEdit)="Edit($event)" (CategoryDelete)="Delete($event)"></app-edit-category>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

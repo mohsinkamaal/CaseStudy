@@ -1,21 +1,21 @@
-﻿/// <reference path="../../../../../node_modules/@types/jasmine/index.d.ts" />
+﻿/// <reference path="../../../../node_modules/@types/jasmine/index.d.ts" />
 import { TestBed, async, ComponentFixture, ComponentFixtureAutoDetect } from '@angular/core/testing';
 import { BrowserModule, By } from "@angular/platform-browser";
-import { SearchCategoryComponent } from './search-category.component';
+import { ViewAllCategoryComponent } from './view-all-category.component';
 
-let component: SearchCategoryComponent;
-let fixture: ComponentFixture<SearchCategoryComponent>;
+let component: ViewAllCategoryComponent;
+let fixture: ComponentFixture<ViewAllCategoryComponent>;
 
-describe('SearchCategory component', () => {
+describe('view-all-category component', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ SearchCategoryComponent ],
+            declarations: [ ViewAllCategoryComponent ],
             imports: [ BrowserModule ],
             providers: [
                 { provide: ComponentFixtureAutoDetect, useValue: true }
             ]
         });
-        fixture = TestBed.createComponent(SearchCategoryComponent);
+        fixture = TestBed.createComponent(ViewAllCategoryComponent);
         component = fixture.componentInstance;
     }));
 

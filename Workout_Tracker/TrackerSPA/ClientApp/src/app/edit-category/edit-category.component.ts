@@ -39,7 +39,7 @@ export class EditCategoryComponent implements OnInit {
       this.click = false;
       let cate: Category = new Category(this.NameAdd.category_id, frm.value.name);
       this.service.update(cate).subscribe(
-        (data) => alert('updated'),
+        (data) => alert('Updated'),
         (error) => console.log(error)
       );
     }

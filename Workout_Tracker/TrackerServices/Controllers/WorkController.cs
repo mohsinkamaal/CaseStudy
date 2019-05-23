@@ -15,7 +15,7 @@ namespace TrackerServices.Controllers
         public IHttpActionResult Get()
         {
             var ObjRepository = new WorkoutRepository();
-            return Ok(ObjRepository.ListCategory());
+            return Ok(ObjRepository.ListAllCategory());
         }
 
 

@@ -8,7 +8,8 @@ namespace BusinessLogic
 {
     public class WorkoutRepository
     {
-        public List<workout_category> ListCategory()
+
+        public List<workout_category> ListAllCategory()
         {
             try
             {
@@ -37,7 +38,7 @@ namespace BusinessLogic
         }
         public void DeleteCategory(int id)
         {
-            Console.WriteLine("Enter the Category Id to delete");
+            Console.WriteLine("Enter the category id to delete");
             int Id = int.Parse(Console.ReadLine());
             try
             {
@@ -58,7 +59,6 @@ namespace BusinessLogic
 
         public void EditCategory(workout_category item)
         {
-
             try
             {
                 WorkoutAppEntities db = new WorkoutAppEntities();
@@ -78,7 +78,6 @@ namespace BusinessLogic
         public workout_category Get(int id)
         {
             workout_category objWork = null;
-
             try
             {
                 WorkoutAppEntities db = new WorkoutAppEntities();
@@ -90,14 +89,26 @@ namespace BusinessLogic
             {
                 throw ex;
             }
-
             return objWork;
-
         }
 
 
 
 
 
+
+
+
+
     }
+
+
 }
+
+
+
+
+
+
+
+

@@ -32,7 +32,7 @@ export class ViewAllCategoryComponent implements OnInit {
   }
   Edit($event) {
     this.service.update($event).subscribe(
-      (data) => alert('updated'),
+      (data) => alert('Updated'),
       (error) => alert("Failed to update")
     );
   }
@@ -40,9 +40,5 @@ export class ViewAllCategoryComponent implements OnInit {
     this.service.delete($event.category_id).subscribe(
       (data) => alert('Deleted'),
       (error) => alert('Failed to delete'));
-
   }
-
-
-
 }

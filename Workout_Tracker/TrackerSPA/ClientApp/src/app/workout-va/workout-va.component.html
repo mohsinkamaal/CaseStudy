@@ -1,0 +1,8 @@
+<div class="col-md-12">
+  <h3>Workout Tracker</h3>
+  <input type="text" class="form-control" name="search" placeholder="Search" [(ngModel)]="wrk" />
+  <div *ngFor="let wrk of Workouts | CPipe: wrk">
+    <app-edit-workout [WorkAdd]="wrk"></app-edit-workout>
+  </div>
+</div>
+

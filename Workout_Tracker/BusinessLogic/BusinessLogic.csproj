@@ -66,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackerModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="WorkoutCollection.cs" />
     <Compile Include="WorkoutRepository.cs" />
     <Compile Include="workout_active.cs">
       <DependentUpon>TrackerModel.tt</DependentUpon>
